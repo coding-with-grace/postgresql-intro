@@ -1,4 +1,4 @@
-# POSTGRESQL and Sequelize Intro
+# POSTGRESQL Intro
 
 ## Intro
 - Relational Database: type of database that allows us to identify and access data in relatio to another piece of data in the database
