@@ -1,14 +1,18 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 
-// app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/students', require('./routes/students'))
-app.use('/colleges', require('./routes/colleges'))
+app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) => {
     res.redirect('/students')
 })
+
+app.use('/students', require('./routes/students'))
+app.use('/colleges', require('./routes/colleges'))
 
 const PORT = 1337
 
